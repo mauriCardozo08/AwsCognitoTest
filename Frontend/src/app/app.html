@@ -1,0 +1,27 @@
+@if (isLoading()) {
+  <p>Cargando...</p>
+} @else {
+  <form (submit)="addExample(); $event.preventDefault()">
+    <input
+      #nameInput
+      type="text"
+      placeholder="Nombre del example"
+      maxlength="100"
+      [value]="exampleName()"
+      (input)="exampleName.set(nameInput.value)"
+      [disabled]="isSaving()"
+    />
+    <button type="submit" [disabled]="isSaving() || !exampleName().trim()">
+      {{ isSaving() ? 'Agregando...' : 'Agregar example' }}
+    </button>
+  </form>
+
+  @if (successMessage(); as message) {
+    <p role="status">{{ message }}</p>
+  }
+  @if (errorMessage(); as message) {
+    <p role="alert">{{ message }}</p>
+  }
+
+  <button type="button" (click)="login()">Iniciar sesión</button>
+}

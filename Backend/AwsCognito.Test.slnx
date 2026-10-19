@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AwsCognito.Test.API/AwsCognito.Test.API.csproj" />
+  <Project Path="AwsCognito.Test.Application/AwsCognito.Test.Application.csproj" />
+  <Project Path="AwsCognito.Test.Domain/AwsCognito.Test.Domain.csproj" />
+  <Project Path="AwsCognito.Test.Infrastructure/AwsCognito.Test.Infrastructure.csproj" />
+</Solution>
